@@ -6,10 +6,36 @@ $w5: 500;
 $w6: 600;
 $w7: 700;
 $fz20: 20px;
+$grn: #01996D;
 // ----------------
+
+// Миксины 
+@mixin dplay($df) {
+    display: $df;
+}
+@mixin jsb($sb) {
+    justify-content: $sb;
+}
+// ----------------
+
+
+html,
+body {
+    height: 100%;
+}
 
 body{
     font-family: 'Lato';
+}
+
+.wrapper {
+    min-height: 100%;
+    @include dplay(flex);
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
 }
 
 .container {
@@ -21,37 +47,39 @@ body{
 .header {
     padding: 20px 0 20px 0;
     &__inner {
-        display: flex;
-        justify-content: space-between;
+        @include dplay(flex);
+        @include jsb(space-between);
         align-items: center;
     }
 
     &__menu {
-        display: flex;
+        @include dplay(flex);
         align-items: center;
         &-list {
-            display: flex;
+            @include dplay(flex);
             &-item {
                 margin-right: 72px;
                 font-weight: $w5;
                 font-size: 20px;
-                color: #292929;
+                a {
+                    color: #292929;
+                }
             }
         }
     }
     &__login {
-        display: flex;
+        @include dplay(flex);
         align-items: center;
-        p:first-child {
+        div:first-child {
             margin-right: 32px;
             font-weight: $w5;
             font-size: $fz20;
             color: #292929;
         }
-        p:last-child {
-            border: 1px solid #01996D;
+        div:last-child {
+            border: 1px solid $grn;
             padding: 13px 50px;
-            background-color: #01996D;
+            background-color: $grn;
             border-radius: 5px;
             font-weight: $w5;
             font-size: $fz20;
@@ -70,13 +98,13 @@ body{
     min-height: 100vh;
     margin-bottom: 169px;
     &-title {
-        display: inline-block;
+        @include dplay(inline-block);
         margin-top: 200px;
         font-family: 'Georgia';
         font-weight: $w7;
         font-size: 65px;
         line-height: 74px;
-        color: #01996D;
+        color: $grn;
         margin-bottom: 30px;
     }
     &-text {
@@ -85,19 +113,22 @@ body{
         margin-bottom: 55px;
     }
     &-button {
-        display: inline-block;
-        background-color: #01996D;;
+        @include dplay(inline-block);
+        background-color: $grn;
         padding: 20px 50px;
         border-radius: 5px;
-        border: 1px solid #01996D;
+        border: 1px solid $grn;
         font-size: $fz20;
     }
 }
 
 .main__body {
+    &-inner {
+        margin-bottom: 51px;
+    }
     &-tt {
-        display: flex;
-        justify-content: space-between;
+        @include dplay(flex);
+        @include jsb(space-between);
         margin-bottom: 187px;
     }
     &-works {
@@ -111,7 +142,7 @@ body{
         font-weight: $w7;
         font-size: 50px;
         line-height: 157%;
-        color: #01996D;
+        color: $grn;
     }
     &-text {
         font-style: normal;
@@ -121,8 +152,8 @@ body{
         color: #424242;
     }
     &-block {
-        display: flex;
-        justify-content: space-between;
+        @include dplay(flex);
+        @include jsb(space-between);
     }
     &-block1, &-block2, &-block3 {
         &-text {
@@ -160,7 +191,6 @@ body{
     }
     &-block2 {
         margin-top: 220px;
-        margin-bottom: 51px;
         position: relative;
         &-num {
             position: absolute;            
@@ -205,8 +235,9 @@ body{
         width: 1500px;
     }
     &-inner {
-        display: flex;
+        @include dplay(flex);
         align-items: center;
+        padding: 229px 0px 177px 0px;
     }
     &-block {
         &-title {
@@ -226,18 +257,22 @@ body{
         }
         &-button {
             padding: 20px 50px;
-            display: inline-block;
-            background-color: #01996D;
+            @include dplay(inline-block);
+            background-color: $grn;
             font-size: $fz20;
             color: #fff;
             border-radius: 5px;
         }
     }
     &-item {
-        margin: 229px 206px 177px 61px;
+        margin-left: 61px;
+        border-radius: 15px;
+        overflow: hidden;
+        width: 900px;
+        height: 500px;
         video {
-            width: 900px;
-            height: 500px;
+            width: 100%;
+            height: 100%;
         }
     }
 }
@@ -247,8 +282,8 @@ body{
         margin-top: 120px;
     }
     &-block {
-        display: flex;
-        justify-content: space-between;
+        @include dplay(flex);
+        @include jsb(space-between);
         position: relative;
         margin-bottom: 168px;
         &-img {
@@ -269,10 +304,14 @@ body{
                 font-size: 14.5px;
                 margin-top: 23px;
             }
-            &-line {
-                margin: 10px auto;
-                border-bottom: 1px solid black;
+
+            &-title:after {
+                content: "";
+                height: 1px;
                 width: 110px;
+                @include dplay(block);
+                background-color: #000;
+                margin: 10px auto;
             }
             &-face {
                 margin-bottom: 10px;
@@ -291,7 +330,7 @@ body{
                 font-size: 11px;
                 li:before {
                     content: '';
-                    display: inline-block;
+                    @include dplay(inline-block);
                     padding: 2px;
                     background: #000;
                     border-radius: 50%;
@@ -319,7 +358,7 @@ body{
                 font-weight: $w7;
                 font-size: 50px;
                 line-height: 157%;
-                color: #01996D;
+                color: $grn;
                 margin-bottom: 20px;
             }
             &-text {
@@ -329,9 +368,9 @@ body{
                 margin-bottom: 40px;
             }
             &-button {
-                display: inline-block;
+                @include dplay(inline-block);
                 padding: 20px 50px;
-                background-color: #01996D;
+                background-color: $grn;
                 color: white;
                 font-size: $fz20;
                 border-radius: 5px;
@@ -345,6 +384,7 @@ body{
     background-color: #245852;
     &__inner {
         padding-top: 95px;
+        margin-bottom: 144px;
     }
     &-title {
         font-family: 'Avenir';
@@ -361,7 +401,7 @@ body{
             color: #FFFFFF;
         }
         li:last-child {
-            padding-bottom: 144px;
+            margin-bottom: 0px;
         }
     }
 }

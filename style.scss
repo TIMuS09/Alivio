@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap');
+@import '_null';
+
+// Переменные
+$w5: 500;
+$w6: 600;
+$w7: 700;
+$fz20: 20px;
+// ----------------
+
+body{
+    font-family: 'Lato';
+}
+
+.container {
+    width: 1413px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 20px 0 20px 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        &-list {
+            display: flex;
+            &-item {
+                margin-right: 72px;
+                font-weight: $w5;
+                font-size: 20px;
+                color: #292929;
+            }
+        }
+    }
+    &__login {
+        display: flex;
+        align-items: center;
+        p:first-child {
+            margin-right: 32px;
+            font-weight: $w5;
+            font-size: $fz20;
+            color: #292929;
+        }
+        p:last-child {
+            border: 1px solid #01996D;
+            padding: 13px 50px;
+            background-color: #01996D;
+            border-radius: 5px;
+            font-weight: $w5;
+            font-size: $fz20;
+            color: #292929;
+        }
+    }
+
+}
+
+.main__top {
+    background-image: url('img/BG.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100vh;
+    margin-bottom: 169px;
+    &-title {
+        display: inline-block;
+        margin-top: 200px;
+        font-family: 'Georgia';
+        font-weight: $w7;
+        font-size: 65px;
+        line-height: 74px;
+        color: #01996D;
+        margin-bottom: 30px;
+    }
+    &-text {
+        font-size: $fz20;
+        line-height: 31px;
+        margin-bottom: 55px;
+    }
+    &-button {
+        display: inline-block;
+        background-color: #01996D;;
+        padding: 20px 50px;
+        border-radius: 5px;
+        border: 1px solid #01996D;
+        font-size: $fz20;
+    }
+}
+
+.main__body {
+    &-tt {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 187px;
+    }
+    &-works {
+        font-weight: $w6;
+        font-size: 24px;
+        line-height: 157%;
+    }
+    &-title {
+        font-family: 'Georgia';
+        font-style: normal;
+        font-weight: $w7;
+        font-size: 50px;
+        line-height: 157%;
+        color: #01996D;
+    }
+    &-text {
+        font-style: normal;
+        font-weight: $w5;
+        font-size: $fz20;
+        line-height: 150%;
+        color: #424242;
+    }
+    &-block {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-block1, &-block2, &-block3 {
+        &-text {
+            font-weight: $w5;
+            font-size: $fz20;
+            line-height: 150%;
+        }
+        &-title {
+            font-family: 'Georgia';
+            font-weight: $w7;
+            font-size: 30px;
+        }
+    }
+    &-block1 {
+        position: relative;
+        &-num {
+            position: absolute;
+            top: -60px;
+        }
+        &-title {
+            margin-left: 78px;
+            margin-bottom: 55px;
+        }
+        &-text {
+            margin-bottom: 60px;
+        }
+        &-picture2 {
+            position: absolute;
+            left: 206px;
+            top: 520px;
+            img {
+            border-radius: 2%;
+            }
+        }
+    }
+    &-block2 {
+        margin-top: 220px;
+        margin-bottom: 51px;
+        position: relative;
+        &-num {
+            position: absolute;            
+        }
+        &-title {
+            margin-top: 59px;
+            margin-left: 72px;
+            margin-bottom: 55px;
+        }
+        &-text {
+            margin-bottom: 37px;
+        }
+    }
+    &-block3 {
+        margin-top: 53px;
+        position: relative;
+        &-num {
+            position: absolute;
+            left: 13px;
+        }
+        &-num {
+            position: absolute;            
+        }
+        &-title {
+            margin-top: 58px;
+            margin-left: 130px;
+            margin-bottom: 46px;
+        }
+        &-text {
+            margin-bottom: 50px;
+        }
+        &-picture {
+            img {
+                border-radius: 3%;
+            }
+        }
+    }
+}
+.main__lower {
+    background-color: #245852;
+    .container {
+        width: 1500px;
+    }
+    &-inner {
+        display: flex;
+        align-items: center;
+    }
+    &-block {
+        &-title {
+            font-family: 'Georgia';
+            font-weight: $w7;
+            font-size: 50px;
+            line-height: 157%;
+            color: #fff;
+            margin-bottom: 33px;
+        }
+        &-text {
+            font-weight: $w6;
+            font-size: 25px;
+            color: #fff;
+            white-space: nowrap;
+            margin-bottom: 57px;
+        }
+        &-button {
+            padding: 20px 50px;
+            display: inline-block;
+            background-color: #01996D;
+            font-size: $fz20;
+            color: #fff;
+            border-radius: 5px;
+        }
+    }
+    &-item {
+        margin: 229px 206px 177px 61px;
+        video {
+            width: 900px;
+            height: 500px;
+        }
+    }
+}
+
+.main__bottom {
+    &-inner {
+        margin-top: 120px;
+    }
+    &-block {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 168px;
+        &-img {
+            margin-left: 58px;
+        }
+        &-card {
+            position: absolute;
+            left: 0;
+            top: 382px;
+            text-align: center;
+            width: 296px;
+            box-shadow: 0px 0px white, -0.01em 0 .9em .1em black;
+            border-radius: 5px;
+            background-color: #fff;
+            
+            &-title {
+                font-weight: $w6;
+                font-size: 14.5px;
+                margin-top: 23px;
+            }
+            &-line {
+                margin: 10px auto;
+                border-bottom: 1px solid black;
+                width: 110px;
+            }
+            &-face {
+                margin-bottom: 10px;
+            }
+            &-name {
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+            &-user {
+                font-family: 'Georgia';
+                font-weight: $w7;
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+            &-content {
+                font-size: 11px;
+                li:before {
+                    content: '';
+                    display: inline-block;
+                    padding: 2px;
+                    background: #000;
+                    border-radius: 50%;
+                    margin-right: 4px;
+                    margin-bottom: 1.7px;
+                }
+                li:first-child {
+                    margin-bottom: 16px;
+                    margin-right: 68px;
+                }
+                li:last-child {
+                    margin-bottom: 30px;
+                    margin-right: 84px;
+                }
+            }
+        }
+        &-info {
+            &-product {
+                font-weight: $w6;
+                font-size: 25px;
+                color: #424242;
+            }
+            &-title {
+                font-family: 'Georgia';
+                font-weight: $w7;
+                font-size: 50px;
+                line-height: 157%;
+                color: #01996D;
+                margin-bottom: 20px;
+            }
+            &-text {
+                font-size: $fz20;
+                line-height: 31px;
+                color: #484848;
+                margin-bottom: 40px;
+            }
+            &-button {
+                display: inline-block;
+                padding: 20px 50px;
+                background-color: #01996D;
+                color: white;
+                font-size: $fz20;
+                border-radius: 5px;
+                margin-bottom: 240px;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: #245852;
+    &__inner {
+        padding-top: 95px;
+    }
+    &-title {
+        font-family: 'Avenir';
+        font-weight: 900;
+        font-size: 40px;
+        color: #FFFFFF;
+        margin-bottom: 60px;
+    }
+    &-items {
+        li {
+            margin-bottom: 60px;
+            font-weight: $w6;
+            font-size: 25px;
+            color: #FFFFFF;
+        }
+        li:last-child {
+            padding-bottom: 144px;
+        }
+    }
+}
